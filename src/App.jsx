@@ -82,7 +82,7 @@ const modes = {
     spotlightTitle: "Appliance mode stays calm and clear",
     spotlightText:
       "The blue theme keeps the same premium layout while shifting the page toward kitchen and laundry repair needs.",
-    heroImage: "/appliance-handshake-hero.jpg",
+    heroImage: "/appliance-repair-handshake.jpg",
     heroImageAlt: "Appliance technician shaking hands with a customer in a kitchen.",
     heroImageLabel: "Appliance repair focus",
   },
