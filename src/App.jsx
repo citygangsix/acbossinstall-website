@@ -41,6 +41,9 @@ const modes = {
     spotlightTitle: "AC service built for urgency",
     spotlightText:
       "The red theme leans into emergency cooling calls and keeps the phone number front and center across the page.",
+    heroImage: "/ac-repair-hero.jpg",
+    heroImageAlt: "Technician working on an outdoor air conditioning condenser.",
+    heroImageLabel: "AC repair focus",
   },
   appliances: {
     id: "appliances",
@@ -79,6 +82,9 @@ const modes = {
     spotlightTitle: "Appliance mode stays calm and clear",
     spotlightText:
       "The blue theme keeps the same premium layout while shifting the page toward kitchen and laundry repair needs.",
+    heroImage: "/appliance-handshake-hero.jpg",
+    heroImageAlt: "Appliance technician shaking hands with a customer in a kitchen.",
+    heroImageLabel: "Appliance repair focus",
   },
 };
 
@@ -182,6 +188,13 @@ function App() {
 
       <main>
         <section className="hero">
+          <div className="hero-scene" aria-hidden="true">
+            <div
+              className="hero-scene-image"
+              style={{ backgroundImage: `url(${currentMode.heroImage})` }}
+            />
+          </div>
+
           <div className="hero-copy">
             <p className="eyebrow">{currentMode.eyebrow}</p>
             <h1>{currentMode.headline}</h1>
@@ -211,6 +224,16 @@ function App() {
           </div>
 
           <aside className="hero-panel">
+            <div className="hero-image-shell">
+              <img
+                className="hero-image"
+                src={currentMode.heroImage}
+                alt={currentMode.heroImageAlt}
+              />
+              <div className="hero-image-overlay" />
+              <div className="hero-image-label">{currentMode.heroImageLabel}</div>
+            </div>
+
             <div className="badge">{currentMode.badge}</div>
 
             <div className="stat-grid">
