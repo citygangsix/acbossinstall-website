@@ -157,7 +157,7 @@ function App() {
           <div className="brand-mark">{mode === "ac" ? "AC" : "AP"}</div>
           <div>
             <p className="brand-name">ASAP AC and Appliance</p>
-            <p className="brand-subtitle">acbossinstall.com</p>
+            <p className="brand-subtitle">asapacboss.com</p>
           </div>
         </div>
 
