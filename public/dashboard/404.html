@@ -7,8 +7,11 @@
   </head>
   <body>
     <script>
-      sessionStorage.setItem("asap-crm-spa-redirect", window.location.href);
-      window.location.replace("/");
+      (function () {
+        var target = window.location.pathname + window.location.search + window.location.hash;
+        sessionStorage.setItem("asap-crm-spa-redirect", target);
+        window.location.replace("/dashboard/");
+      })();
     </script>
   </body>
 </html>
