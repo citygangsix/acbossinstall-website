@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Review and authorize a Same Day Appliances invoice before secure Square payment." />
+    <meta name="theme-color" content="#1d4ed8" />
+    <title>Same Day Appliances | Payment Authorization</title>
+    <script type="module" crossorigin src="/payment/assets/index-Qp3XCNim.js"></script>
+    <link rel="stylesheet" crossorigin href="/payment/assets/index-0AIZ0e04.css" />
+  </head>
+  <body>
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem("asap-payment-spa-redirect");
+        if (!redirect) return;
+        sessionStorage.removeItem("asap-payment-spa-redirect");
+        var url = new URL(redirect, window.location.origin);
+        if (url.origin === window.location.origin && url.pathname.indexOf("/payment/") === 0) {
+          history.replaceState(null, "", url.pathname + url.search + url.hash);
+        }
+      })();
+    </script>
+    <div id="root"></div>
+  </body>
+</html>
