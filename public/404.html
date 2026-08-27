@@ -8,6 +8,12 @@
   <body>
     <script>
       (function () {
+        if (window.location.pathname.startsWith("/service-completion/")) {
+          sessionStorage.setItem("asap-service-completion-spa-redirect", window.location.href);
+          window.location.replace("/service-completion/");
+          return;
+        }
+
         if (window.location.pathname.startsWith("/payment/")) {
           sessionStorage.setItem("asap-payment-spa-redirect", window.location.href);
           window.location.replace("/payment/");

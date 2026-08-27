@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Review and sign your Same Day Appliances service completion acknowledgment." />
+    <meta name="theme-color" content="#1d4ed8" />
+    <title>Same Day Appliances | Service Completion</title>
+    <script type="module" crossorigin src="/service-completion/assets/index-C3udphL2.js"></script>
+    <link rel="stylesheet" crossorigin href="/service-completion/assets/index-BbpI4FdI.css" />
+  </head>
+  <body>
+    <script>
+      (function () {
+        var redirect = sessionStorage.getItem("asap-service-completion-spa-redirect");
+        if (!redirect) return;
+        sessionStorage.removeItem("asap-service-completion-spa-redirect");
+        var url = new URL(redirect, window.location.origin);
+        if (url.origin === window.location.origin && url.pathname.indexOf("/service-completion/") === 0) {
+          history.replaceState(null, "", url.pathname + url.search + url.hash);
+        }
+      })();
+    </script>
+    <div id="root"></div>
+  </body>
+</html>
